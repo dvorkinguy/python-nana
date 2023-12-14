@@ -1,39 +1,16 @@
-# Hey, provide me number of days as a comma separated list, I'll convert it to hours!
 
-calculation_to_hours = 24
-name_of_unit = 'hours'
+#from helper import user_input_message, validate_and_execute
+import logging
 
+logger = logging.getLogger("MAIN")
+logger.error("Error happened in the App")
 
-def days_to_units (number_of_days):
-    return (f"\nGreat, {number_of_days} days are {number_of_days * calculation_to_hours} {name_of_unit}.\n")
-    
-
-
-def validate_and_execute():
-    try:
-        user_input_number = int(num_of_days_element)
-
-        # We want to do conversion only for positive integers
-        if user_input_number > 0:
-            calculated_value = days_to_units(int(num_of_days_element))
-            print(calculated_value)
-        elif user_input_number == 0:
-            print("\nYou have entered a 0. Kindly input a positive number.\n\n")
-        else:
-            print("\nYou have enetered a negative number. Just stop doing it!\n\n")
-    
-    except:
-        print("\nYour input isn't a valid number. Don't ruin my program!\n\n")
-
-
-user_input = ""
+"""user_input = ""
 while user_input != "exit":
-    user_input = input("\nHey, enter a number of days and convestion unit!\n\n")
-    #print(type(user_input.split(", ")))
-    #print(user_input.split(", "))
-    print(type(set(user_input.split(", "))))
-    
-    for num_of_days_element in set(user_input.split(", ")):
-        validate_and_execute()
-
-
+    user_input = input(user_input_message)
+    days_and_unit = user_input.split(":")
+    print(days_and_unit)
+    days_and_unit_dictionary = {"days": days_and_unit[0], "unit": days_and_unit[1]}
+    print(days_and_unit_dictionary)
+    print(type(days_and_unit_dictionary))
+    validate_and_execute(days_and_unit_dictionary)"""
